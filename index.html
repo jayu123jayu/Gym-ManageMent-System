@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body >
+
+<header>
+  <h1>Gym Management System</h1>
+</header>
+
+<div class="container">
+
+  <!-- Add Member -->
+  <div class="card">
+    <h2>Add Member</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="file">
+   <!-- Start Date -->
+<label>Start Date</label>
+<input 
+  type="date" 
+  placeholder="Enter Start Date" 
+  class="form-control"
+/>
+
+<!-- Expiry Date -->
+<label>Expiry Date</label>
+<input 
+  type="date" id="expiry"
+  placeholder="Enter Expiry Date" 
+  class="form-control"
+/>
+    <button onclick="addMember()">Add Member</button>
+  </div>
+
+  <!-- Members List -->
+  <div class="card">
+    <h2>Members List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Expiry Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="memberTable">
+        <tr>
+          <td>Rahul</td>
+          <td>9876543210</td>
+          <td>2026-04-10</td>
+          <td class="status-active">Active</td>
+        </tr>
+        <tr>
+          <td>Amit</td>
+          <td>9123456780</td>
+          <td>2026-03-01</td>
+          <td class="status-expired">Expired</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- QR Attendance -->
+  <div class="card">
+    <h2>QR Attendance</h2>
+    <input type="text" id="phoneInput" placeholder="Scan Phone Number / QR">
+    <button onclick="markAttendance()">Mark Attendance</button>
+
+    <div id="result"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
